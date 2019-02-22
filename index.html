@@ -11,8 +11,9 @@
   <script type="text/javascript">
   
   function a(){
-    var ip = $.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
-        console.log(JSON.stringify(data, null, 2));   
+    var ip = $.getJSON('https://ipapi.co/json/', function(data) {
+  console.log(JSON.stringify(data, null, 2));
+}); 
         
         var nVer = navigator.appVersion;
 var nAgt = navigator.userAgent;
@@ -85,9 +86,9 @@ if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
 //  +'navigator.appName = '+navigator.appName+'<br>'
 //  +'navigator.userAgent = '+navigator.userAgent+'<br>'
 // )
-setTimeout(function(){document.body.innerHTML+="<p>"+data.geoplugin_countryName+"</p>"}, 2000)
-setTimeout(function(){document.body.innerHTML+="<p>"+data.geoplugin_city+"</p>"},4000)
-setTimeout(function(){document.body.innerHTML+="<p>"+data.geoplugin_request+"</p>"},6000)
+setTimeout(function(){document.body.innerHTML+="<p>"+data.country_name+"</p>"}, 2000)
+setTimeout(function(){document.body.innerHTML+="<p>"+data.city+"</p>"},4000)
+setTimeout(function(){document.body.innerHTML+="<p>"+data.ip+"</p>"},6000)
 setTimeout(function(){document.body.innerHTML+="<p>"+OSName+"</p>"},8000)
 setTimeout(function(){document.body.innerHTML+="<p>"+browserName+"</p>"},10000)
 setTimeout(function(){document.body.innerHTML+="<p>"+fullVersion+"</p>"},12000)
